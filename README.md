@@ -164,7 +164,7 @@ POST `https://evening-plateau-54365.herokuapp.com/tickets`
 Required Headers
 {
   'Content-Type': 'application/json',
-  Accepts: 'application/json'
+  'Accept': 'application/json'
 }
 
 Required Keys
