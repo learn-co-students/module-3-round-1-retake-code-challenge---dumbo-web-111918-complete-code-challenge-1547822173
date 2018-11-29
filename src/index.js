@@ -1,1 +1,1 @@
-const theatreId = 1;
+const theatreId = null;
