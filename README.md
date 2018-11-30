@@ -189,7 +189,7 @@ Example Responses:
 
 #### Important Note
 
-**Once this response is received you need to decrease the number of remaining tickets.** 
+**Once this response is received you need to decrease the number of remaining tickets displayed on the DOM.** 
 
 ### Styling
 
