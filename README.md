@@ -18,14 +18,15 @@ You will be building out an application that allows a user to purchase movie tic
 
 The backend for this challenge can be found at `https://evening-plateau-54365.herokuapp.com/`
 
-There are two API endpoints you will use, one to fetch all of the data associated with your assigned theatre and the other to create tickets in the database.
+There are two endpoints you will use, one to fetch all of the data associated with your assigned theatre and the other to create tickets in the database.
 
-
-#### GET `/theatres/:id`
+When you visit `https://evening-plateau-54365.herokuapp.com/` in your browser, you'll be assigned a **unique id**
 
 **Before you do anything else, change the variable `theatreId` in your index.js file to your assigned id.**
 
-Use your assigned id to get the data for all of the showings at your theatre.
+#### GET `/theatres/:id`
+
+Use your assigned id to get the data for all of the showings at your assigned theatre.
 
 GET `https://evening-plateau-54365.herokuapp.com/theatres/:id`
 
@@ -178,22 +179,17 @@ Required Keys
 Example Responses:
 * Successfully created ticket
 ```json
-{"id": 3820, "showing_id": 182, "created_at": "2017-11-13T12:12:28.682Z"}
+{ "id": 3820, "showing_id": 182, "created_at": "2017-11-13T12:12:28.682Z" }
 ```
 * Sold out
 ```js
-{"error": "That showing is sold out"}
+{ "error": "That showing is sold out" }
 // status 422
 ```
 
 #### Important Note
 
-**Once this response is received you need to decrease the number of remaining tickets.** You could imagine one way of doing this would be to find the particular part of the DOM that needs to be updated and changing only that small part.
-
-Instead, we would recommend **updating the entire list of film showings by making another fetch request, clearing out the current list, and re-inserting the new elements into the DOM**. This may seem more inefficient, but it is likely simpler to implement and closer to patterns we will see in the future.
-
-In the end, whatever way you can get this working is totally ok!
-
+**Once this response is received you need to decrease the number of remaining tickets.** 
 
 ### Styling
 
@@ -226,4 +222,3 @@ The cards that represent a movie showing should be appended to the div with the 
 ### Considerations
 
 You are free to solve this in any way you choose. It is not required that you have ES6 classes or use Object Orientation. We would recommend beginning with a straightforward functional implementation and refactoring to objects as needed.
-
